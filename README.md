@@ -94,7 +94,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Contributing
 
 Feel free to fork this repository and make changes to improve the tool. If you have any ideas or features you'd like to see, open an issue or create a pull request!
-
----
-
-This `README.md` provides an overview of how the tool works, how to use it, and installation instructions for users and contributors. Let me know if you'd like any further adjustments!
