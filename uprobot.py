@@ -18,22 +18,17 @@ def get_user_ip():
 
 def check_website(website, status_dict, user_ip, save_file=None):
     try:
-        # Get the current time
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        
-        # Make the HTTP request to check the website status
+       
         response = requests.get(website, timeout=1)
         
-        # Get the destination IP address
         dst_ip = socket.gethostbyname(urlparse(website).hostname)
-        
-        # Display the formatted output with time, URL, status, code, and IPs
+
         if response.status_code == 200:
             status_dict["UP"] += 1
             output = f"{current_time} | {website} | {Fore.GREEN}UP | {response.status_code} | SrcIP: {user_ip} | DstIP: {dst_ip}"
             print(output)
             
-            # Save output if requested
             if save_file:
                 with open(save_file, "a") as file:
                     file.write(output + "\n")
@@ -64,11 +59,9 @@ def print_summary(status_dict):
     print(f"{Fore.YELLOW}ERROR: {status_dict['ERROR']}")
 
 def main():
-    # Display the header
     header = pyfiglet.figlet_format("UpRobot")
     print(header)
     
-    # Tool description and credits
     print("====================================================")
     print(Fore.CYAN + "Website Monitoring Tool - Check the UP/DOWN status of websites.")
     print("====================================================")
@@ -98,7 +91,6 @@ def main():
     scan_speed = safe_input("Choose scan speed (fast/slow): ").lower().strip()
     delay = 0.3 if scan_speed == "fast" else 1
 
-    # Ask if the user wants to save "UP" statuses to a file
     save_up_only = safe_input("Save only 'UP' statuses to a file? (yes/no): ").lower().strip()
     save_file = None
     if save_up_only == "yes":
