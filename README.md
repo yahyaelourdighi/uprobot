@@ -26,7 +26,7 @@ UpRobot is a simple and powerful website monitoring tool that checks the "UP" an
 
 ### Clone the repository:
 ```bash
-git clone https://github.com/yahyaelourdighi/website-monitoring-tool.git
+git clone https://github.com/yahyaelourdighi/uprobot.git
 cd website-monitoring-tool
 ```
 
