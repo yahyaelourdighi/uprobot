@@ -2,6 +2,9 @@
 
 UpRobot is a simple and powerful website monitoring tool that checks the "UP" and "DOWN" statuses of websites. It fetches the status, HTTP response codes, and logs results with time stamps, including the user’s public IP address and destination IP of the websites. The tool also allows you to monitor websites either manually or from a file.
 
+![robot](https://github.com/user-attachments/assets/06c69ccd-dacf-43fc-9cae-98b75f1fe8f3)
+
+
 ## Features
 
 - **Website Monitoring**: Check if websites are up or down.
